@@ -1,0 +1,3 @@
+<x-ministrylayout>
+    
+</x-ministrylayout>

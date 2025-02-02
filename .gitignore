@@ -1,0 +1,41 @@
+# Laravel-related files
+/vendor
+/node_modules
+/storage
+/bootstrap/cache
+
+# Environment and config files
+.env
+.env.*
+*.env
+/.fleet
+
+# Laravel build and compiled files
+/public/storage
+/public/build
+/public/hot
+/storage/*.key
+/storage/oauth-private.key
+/storage/oauth-public.key
+.phpunit.cache
+.phpunit.result.cache
+
+# Homestead & Docker
+Homestead.json
+Homestead.yaml
+.vagrant/
+.docker/
+docker-compose.yml
+
+# Editor & IDE Configurations
+/.idea
+/.vscode
+/.fleet
+
+# NPM/Yarn Logs
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Other Logs
+*.log

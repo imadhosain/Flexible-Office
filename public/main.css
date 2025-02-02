@@ -1,0 +1,369 @@
+/* Base Styles */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Header Bar */
+.header-bar {
+  background: linear-gradient(135deg, #125E09, #1E8449); /* Gradient background */
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px; /* Modern look */
+  position: sticky; /* Sticky header */
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Container for Content and Form */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Content Section */
+.content-section {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Scheme Image */
+.schemeimg {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Hover effect */
+}
+
+.schemeimg:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Tagline */
+.tagline {
+  font-size: 2rem; /* Slightly larger */
+  font-weight: bold;
+  margin: 20px 0;
+  color: #512D6D;
+  letter-spacing: -0.5px; /* Tighten letter spacing */
+}
+
+/* Subtext */
+.subtext {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8; /* More spacing between lines */
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  padding: 30px; /* More padding */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #e0e0e0; /* Add border */
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px; /* More padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1rem; /* Slightly larger font */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Focus effect */
+}
+
+.form-group input:focus {
+  border-color: #28a745; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Add glow effect */
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; /* Hover effect */
+  margin-top: 10px; /* Add spacing above the button */
+}
+
+.btn-submit:hover {
+  background: #218838;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #125E09, #1E8449); /* Gradient background */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden by default */
+  transition: background 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+  background: #218838;
+  transform: scale(1.1);
+}
+
+.scroll-to-top.visible {
+  display: block; /* Show when scrolling */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .header-bar, .dark-mode .footer {
+  background: linear-gradient(135deg, #0D4A04, #1A6E3D);
+}
+
+.dark-mode .form-section {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+.dark-mode .form-group input {
+  background: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark-mode .btn-submit {
+  background: #1e7d34;
+}
+
+.dark-mode .btn-submit:hover {
+  background: #166529;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: right; /* RTL alignment */
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #125E09;
+  color: white;
+  font-weight: bold;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-section, .form-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .header-bar {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    position: static; /* Remove fixed footer on small screens */
+  }
+
+  .table th, .table td {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+/* Base Styles */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6; /* Improved readability */
+  direction: rtl; /* Ensure RTL compatibility */
+}
+
+/* Header Bar */
+.header-bar {
+  background: linear-gradient(135deg, #125E09, #1E8449); /* Gradient background */
+  padding: 15px 0;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-bar h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-bar a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.header-bar a:hover {
+  opacity: 0.8; /* Hover effect */
+}
+
+.header-bar .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent button */
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.header-bar .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+/* Sidebar */
+.side-bar {
+  background-color: #ffffff; /* White background */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  width: 250px; /* Fixed width */
+  min-height: 100vh; /* Full height */
+  padding: 20px;
+}
+
+.side-bar button {
+  width: 100%;
+  margin-bottom: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.side-bar button:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.side-bar h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.side-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main Content */
+.container-fluid {
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #125E09, #1E8449); /* Gradient background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: auto; /* Push footer to bottom */
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer a:hover {
+  opacity: 0.8; /* Hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-bar {
+    padding: 10px 0;
+  }
+
+  .header-bar h3 {
+    font-size: 1.5rem;
+  }
+
+  .side-bar {
+    width: 100%; /* Full width on small screens */
+    min-height: auto;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .side-bar button {
+    margin-bottom: 5px;
+  }
+
+  .container-fluid {
+    padding: 10px;
+  }
+}
